@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HousingLocation } from './housinglocation';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HousingService {
   protected housingLocationList: HousingLocation[] = [
@@ -14,7 +14,7 @@ export class HousingService {
       photo: '/assets/example-house.jpg',
       availableUnits: 4,
       wifi: true,
-      laundry: true
+      laundry: true,
     },
     {
       id: 1,
@@ -24,7 +24,7 @@ export class HousingService {
       photo: '/assets/example-house-1.jpg',
       availableUnits: 0,
       wifi: false,
-      laundry: true
+      laundry: true,
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ export class HousingService {
       photo: '/assets/example-house-2.jpg',
       availableUnits: 1,
       wifi: false,
-      laundry: false
+      laundry: false,
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ export class HousingService {
       photo: '/assets/example-house-3.jpg',
       availableUnits: 1,
       wifi: true,
-      laundry: false
+      laundry: false,
     },
     {
       id: 4,
@@ -54,7 +54,7 @@ export class HousingService {
       photo: '/assets/example-house-4.jpg',
       availableUnits: 1,
       wifi: true,
-      laundry: false
+      laundry: false,
     },
     {
       id: 5,
@@ -64,7 +64,7 @@ export class HousingService {
       photo: '/assets/example-house-5.jpg',
       availableUnits: 2,
       wifi: true,
-      laundry: true
+      laundry: true,
     },
     {
       id: 6,
@@ -74,7 +74,7 @@ export class HousingService {
       photo: '/assets/example-house-6.jpg',
       availableUnits: 5,
       wifi: true,
-      laundry: true
+      laundry: true,
     },
     {
       id: 7,
@@ -84,7 +84,7 @@ export class HousingService {
       photo: '/assets/example-house-7.jpg',
       availableUnits: 2,
       wifi: true,
-      laundry: true
+      laundry: true,
     },
     {
       id: 8,
@@ -94,7 +94,7 @@ export class HousingService {
       photo: '/assets/example-house-8.jpg',
       availableUnits: 10,
       wifi: false,
-      laundry: false
+      laundry: false,
     },
     {
       id: 9,
@@ -104,17 +104,19 @@ export class HousingService {
       photo: '/assets/example-house-9.jpg',
       availableUnits: 6,
       wifi: true,
-      laundry: true
-    }
+      laundry: true,
+    },
   ];
 
   getAllHousingLocations(): HousingLocation[] {
     return this.housingLocationList;
   }
-  
+
   getHousingLocationById(id: number): HousingLocation | undefined {
-    return this.housingLocationList.find(housingLocation => housingLocation.id === id);
+    return this.housingLocationList.find(
+      (housingLocation) => housingLocation.id === id
+    );
   }
-  
-  constructor() { }
+
+  constructor() {}
 }
